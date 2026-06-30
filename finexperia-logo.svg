@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FinExperia — full vertical lockup (mark + wordmark + tagline)
+  Gold #D4A53C on charcoal #131210. Vector reproduction of the brand logo.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 360" width="420" height="360" role="img" aria-label="FinExperia — Proven Paths to Growth">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;800&amp;display=swap');</style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="420" height="360" fill="#131210"/>
+
+  <!-- ── MARK (centred) ── translate so the 100×100 mark sits at x=160..260, y=40..140 -->
+  <g transform="translate(160,40)">
+    <path d="M50 12 L86 84 L60 84 L50 60 Z" fill="#D4A53C"/>
+    <g stroke="#D4A53C" stroke-width="2.3" stroke-linecap="round" fill="none">
+      <line x1="50" y1="12" x2="14"   y2="84"/>
+      <line x1="50" y1="19" x2="17.5" y2="84"/>
+      <line x1="50" y1="27" x2="21.5" y2="84"/>
+      <line x1="50" y1="35" x2="25.5" y2="84"/>
+      <line x1="50" y1="43" x2="29.5" y2="84"/>
+      <line x1="50" y1="51" x2="33.5" y2="84"/>
+      <line x1="50" y1="60" x2="38"   y2="84"/>
+    </g>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="210" y="210" text-anchor="middle"
+        font-family="'Sora','Helvetica Neue',Arial,sans-serif" font-weight="800"
+        font-size="46" letter-spacing="6" fill="#F7F4EC">FINEXPERIA<tspan font-size="16" dy="-20" letter-spacing="0">™</tspan></text>
+
+  <!-- Gold rule -->
+  <rect x="178" y="234" width="64" height="3" rx="1.5" fill="#D4A53C"/>
+
+  <!-- Tagline -->
+  <text x="210" y="270" text-anchor="middle"
+        font-family="'Sora','Helvetica Neue',Arial,sans-serif" font-weight="600"
+        font-size="15" letter-spacing="4.5" fill="#9A8C72">PROVEN PATH TO GROWTH</text>
+</svg>

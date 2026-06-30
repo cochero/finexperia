@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FinExperia — primary mark "ASCENT"
+  Upward arrow / peak. Left face = engraved stripes (the climb / the steps),
+  right face = solid gold (arrival / growth). Gold on transparent.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="FinExperia">
+  <!-- Right wing — solid gold -->
+  <path d="M50 12 L86 84 L60 84 L50 60 Z" fill="#D4A53C"/>
+  <!-- Left wing — parallel gold strokes, all parallel to the outer left edge -->
+  <g stroke="#D4A53C" stroke-width="2.3" stroke-linecap="round" fill="none">
+    <line x1="50" y1="12" x2="14"   y2="84"/>
+    <line x1="50" y1="19" x2="17.5" y2="84"/>
+    <line x1="50" y1="27" x2="21.5" y2="84"/>
+    <line x1="50" y1="35" x2="25.5" y2="84"/>
+    <line x1="50" y1="43" x2="29.5" y2="84"/>
+    <line x1="50" y1="51" x2="33.5" y2="84"/>
+    <line x1="50" y1="60" x2="38"   y2="84"/>
+  </g>
+</svg>

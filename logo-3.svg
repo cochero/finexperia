@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FinExperia — Logo 03 "AXIS"
+  Concept: Financial coordinate system (x/y axes + arrowheads) with
+  a rising performance curve and growing data-point nodes.
+  Bloomberg terminal aesthetic. Measurement + ambition in one mark.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;800&amp;family=Inter:wght@600&display=swap');</style>
+    <linearGradient id="wg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6F61"/><stop offset="100%" stop-color="#FF9A85"/>
+    </linearGradient>
+    <linearGradient id="ibg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#231110"/><stop offset="100%" stop-color="#150907"/>
+    </linearGradient>
+    <linearGradient id="cg" x1="20" y1="62" x2="60" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#FF6F61" stop-opacity="0.4"/>
+      <stop offset="50%"  stop-color="#FF6F61"/>
+      <stop offset="100%" stop-color="#FF9A85"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="4" width="72" height="72" rx="18" fill="url(#ibg)"/>
+  <rect x="0" y="4" width="72" height="72" rx="18"
+        fill="none" stroke="rgba(255,111,97,0.16)" stroke-width="1"/>
+
+  <!-- Y-axis -->
+  <line x1="20" y1="62" x2="20" y2="15"
+        stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+  <!-- X-axis -->
+  <line x1="20" y1="62" x2="62" y2="62"
+        stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- Arrowheads -->
+  <polygon points="20,11 16,18 24,18" fill="#FF6F61" opacity="0.7"/>
+  <polygon points="65,62 58,58 58,66" fill="#FF6F61" opacity="0.7"/>
+
+  <!-- Axis ticks -->
+  <line x1="17" y1="46" x2="23" y2="46" stroke="#FF6F61" stroke-width="1" opacity="0.22"/>
+  <line x1="17" y1="33" x2="23" y2="33" stroke="#FF6F61" stroke-width="1" opacity="0.22"/>
+  <line x1="35" y1="59" x2="35" y2="65" stroke="#FF6F61" stroke-width="1" opacity="0.22"/>
+  <line x1="49" y1="59" x2="49" y2="65" stroke="#FF6F61" stroke-width="1" opacity="0.22"/>
+
+  <!-- Rising performance curve -->
+  <path d="M 20,62 C 28,54 36,46 44,37 C 50,30 54,24 60,17"
+        stroke="url(#cg)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Data nodes — grow in size as career progresses -->
+  <circle cx="30" cy="53" r="2.5" fill="#FF6F61" opacity="0.50"/>
+  <circle cx="42" cy="38" r="3.5" fill="#FF6F61" opacity="0.78"/>
+  <circle cx="57" cy="21" r="5"   fill="#FF9A85"/>
+  <circle cx="57" cy="21" r="9"   fill="none" stroke="#FF9A85" stroke-width="1.5" opacity="0.25"/>
+
+  <!-- Wordmark -->
+  <text y="47" font-family="'Sora','Helvetica Neue',Arial,sans-serif"
+        font-size="28" letter-spacing="-0.5">
+    <tspan x="88" font-weight="300" fill="#FFB4A2">Fin</tspan>
+    <tspan font-weight="800" fill="url(#wg)">Experia</tspan>
+  </text>
+  <text x="88" y="63" font-family="'Inter','Helvetica Neue',Arial,sans-serif"
+        font-size="9" font-weight="600" fill="#9E7060" letter-spacing="2.5">EXPERIENTIAL LEARNING · INDIA</text>
+</svg>

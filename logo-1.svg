@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FinExperia — Logo 01 "TRADE"
+  Concept: The letter "F" built entirely from trading candlesticks.
+  Finance students see a bullish chart pattern; everyone else sees a brand initial.
+  Candle 2 is wider + taller = upward momentum / the growth journey.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;800&amp;family=Inter:wght@600&display=swap');</style>
+    <linearGradient id="wg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6F61"/><stop offset="100%" stop-color="#FF9A85"/>
+    </linearGradient>
+    <linearGradient id="ibg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#231110"/><stop offset="100%" stop-color="#150907"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon bg -->
+  <rect x="0" y="4" width="72" height="72" rx="18" fill="url(#ibg)"/>
+  <rect x="0" y="4" width="72" height="72" rx="18"
+        fill="none" stroke="rgba(255,111,97,0.16)" stroke-width="1"/>
+
+  <!-- THE SPINE of letter F -->
+  <rect x="14" y="13" width="7" height="49" rx="3" fill="#FF6F61"/>
+
+  <!-- CANDLE 1 — top crossbar of F (peach = early/learning) -->
+  <line x1="29" y1="8"  x2="29" y2="14" stroke="#FFB4A2" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="21" y="14" width="16" height="8" rx="2" fill="#FFB4A2"/>
+  <line x1="29" y1="22" x2="29" y2="27" stroke="#FFB4A2" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- CANDLE 2 — mid crossbar of F (coral, WIDER+TALLER = bullish execution phase) -->
+  <line x1="35" y1="28" x2="35" y2="35" stroke="#FF6F61" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="21" y="35" width="28" height="13" rx="2" fill="#FF6F61"/>
+  <line x1="35" y1="48" x2="35" y2="55" stroke="#FF6F61" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Chart baseline — the "trading terminal" ground line -->
+  <line x1="12" y1="63" x2="60" y2="63" stroke="rgba(255,111,97,0.11)" stroke-width="1"/>
+
+  <!-- Wordmark -->
+  <text y="47" font-family="'Sora','Helvetica Neue',Arial,sans-serif"
+        font-size="28" letter-spacing="-0.5">
+    <tspan x="88" font-weight="300" fill="#FFB4A2">Fin</tspan>
+    <tspan font-weight="800" fill="url(#wg)">Experia</tspan>
+  </text>
+  <text x="88" y="63" font-family="'Inter','Helvetica Neue',Arial,sans-serif"
+        font-size="9" font-weight="600" fill="#9E7060" letter-spacing="2.5">EXPERIENTIAL LEARNING · INDIA</text>
+</svg>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinExperia — Brand Mark Collection v2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --coral:#FF6F61;--cl:#FF9A85;--cd:#E8513D;
+      --peach:#FFB4A2;--ink:#0D0705;--s2:#261310;
+      --cream:#FFF6F2;--muted:#9E7060;--text:#FFF2EE;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--text);-webkit-font-smoothing:antialiased}
+    .ph{text-align:center;padding:80px 24px 60px;
+        background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(255,111,97,.07) 0%,transparent 70%);
+        border-bottom:1px solid rgba(255,111,97,.1)}
+    .ey{display:inline-block;font-family:'Sora',sans-serif;font-size:.65rem;font-weight:700;
+        letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin-bottom:.8rem}
+    .ph h1{font-family:'Sora',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;
+        letter-spacing:-.03em;background:linear-gradient(135deg,#FF6F61,#FF9A85);
+        -webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.1}
+    .ph .sub{color:var(--muted);font-size:.95rem;margin-top:.5rem}
+    .concept-pill{display:inline-flex;align-items:center;gap:6px;margin-top:1.4rem;
+        padding:9px 20px;background:rgba(255,111,97,.07);border:1px solid rgba(255,111,97,.22);
+        border-radius:100px;font-size:.82rem;color:var(--peach)}
+    .concept-pill span{color:var(--coral);font-weight:700}
+    .wrap{max-width:1260px;margin:0 auto;padding:0 40px}
+    .sec{padding:60px 0}
+    .sec-rule{display:flex;align-items:center;gap:14px;margin-bottom:28px}
+    .sec-rule::after{content:'';flex:1;height:1px;background:rgba(255,111,97,.1)}
+    .sl{font-family:'Sora',sans-serif;font-size:.63rem;font-weight:700;
+        letter-spacing:.15em;text-transform:uppercase;color:rgba(255,111,97,.35);white-space:nowrap}
+    .lw .sl{color:rgba(200,60,40,.3)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .card{border-radius:24px;border:1px solid rgba(255,111,97,.10);background:#1E0F0C;
+        display:flex;flex-direction:column;overflow:hidden;transition:border-color .22s,box-shadow .22s}
+    .card:hover{border-color:rgba(255,111,97,.30);box-shadow:0 20px 70px rgba(255,111,97,.07)}
+    .disp{flex:1;display:flex;align-items:center;justify-content:center;
+        padding:48px 44px 38px;min-height:172px}
+    .disp svg{max-width:100%;height:auto}
+    .meta{padding:20px 28px 24px;border-top:1px solid rgba(255,111,97,.09)}
+    .mh{display:flex;align-items:baseline;gap:10px;margin-bottom:6px}
+    .mn{font-family:'Sora',sans-serif;font-size:.58rem;font-weight:700;
+        letter-spacing:.1em;color:rgba(255,111,97,.3)}
+    .mt{font-family:'Sora',sans-serif;font-size:1rem;font-weight:700;color:var(--text)}
+    .mc{font-size:.8rem;color:var(--muted);line-height:1.5;margin-bottom:8px}
+    .mu{font-size:.72rem;color:rgba(255,180,162,.38);letter-spacing:.04em}
+    .lw{background:var(--cream);color:#1A0A08;padding:60px 0}
+    .lw .card{background:#fff;border-color:rgba(180,60,40,.1)}
+    .lw .card:hover{border-color:rgba(255,111,97,.32);box-shadow:0 12px 40px rgba(180,60,40,.08)}
+    .lw .meta{border-top-color:rgba(180,60,40,.09)}
+    .lw .mn{color:rgba(180,60,40,.28)}.lw .mt{color:#1A0A08}
+    .lw .mc{color:#7A5048}.lw .mu{color:rgba(140,70,50,.38)}
+    .pal{padding:52px 0 72px;border-top:1px solid rgba(255,111,97,.07)}
+    .ptl{font-family:'Sora',sans-serif;font-size:.62rem;font-weight:700;
+         letter-spacing:.15em;text-transform:uppercase;color:rgba(255,111,97,.3);margin-bottom:22px}
+    .swatches{display:flex;gap:20px;flex-wrap:wrap}
+    .sw-item{display:flex;align-items:center;gap:10px}
+    .sw{width:36px;height:36px;border-radius:10px;box-shadow:0 3px 12px rgba(0,0,0,.4);flex-shrink:0}
+    .si strong{display:block;font-family:'Sora',sans-serif;font-size:.82rem;color:var(--text)}
+    .si span{font-size:.7rem;color:var(--muted);font-family:monospace}
+    @media(max-width:880px){.grid{grid-template-columns:1fr}}
+    @media(max-width:580px){.wrap{padding:0 20px}.disp{padding:32px 20px 24px}}
+  </style>
+</head>
+<body>
+
+<header class="ph">
+  <span class="ey">Creative Direction · Brand Identity 2025</span>
+  <h1>FinExperia Brand Marks</h1>
+  <p class="sub">Four distinct concepts. Each tells the Finance + Experience story a different way.</p>
+  <div class="concept-pill">
+    <span>Design principle:</span> Every mark has a visual "aha!" — a second read that rewards attention.
+  </div>
+</header>
+
+<div class="wrap"><section class="sec">
+<div class="sec-rule"><span class="sl">Dark Background</span></div>
+<div class="grid">
+
+<!-- 01 TRADE -->
+<div class="card"><div class="disp">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80">
+  <defs>
+    <linearGradient id="d1wg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6F61"/><stop offset="100%" stop-color="#FF9A85"/></linearGradient>
+    <linearGradient id="d1bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#231110"/><stop offset="100%" stop-color="#150907"/></linearGradient>
+  </defs>
+  <rect x="0" y="4" width="72" height="72" rx="18" fill="url(#d1bg)"/>
+  <rect x="0" y="4" width="72" height="72" rx="18" fill="none" stroke="rgba(255,111,97,0.16)" stroke-width="1"/>
+  <rect x="14" y="13" width="7" height="49" rx="3" fill="#FF6F61"/>
+  <line x1="29" y1="8"  x2="29" y2="14" stroke="#FFB4A2" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="21" y="14" width="16" height="8" rx="2" fill="#FFB4A2"/>
+  <line x1="29" y1="22" x2="29" y2="27" stroke="#FFB4A2" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="35" y1="28" x2="35" y2="35" stroke="#FF6F61" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="21" y="35" width="28" height="13" rx="2" fill="#FF6F61"/>
+  <line x1="35" y1="48" x2="35" y2="55" stroke="#FF6F61" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="12" y1="63" x2="60" y2="63" stroke="rgba(255,111,97,0.10)" stroke-width="1"/>
+  <text y="47" font-family="'Sora','Helvetica Neue',Arial,sans-serif" font-size="28" letter-spacing="-0.5">
+    <tspan x="88" font-weight="300" fill="#FFB4A2">Fin</tspan><tspan font-weight="800" fill="url(#d1wg)">Experia</tspan></text>
+  <text x="88" y="63" font-family="'Inter',Arial,sans-serif" font-size="9" font-weight="600" fill="#9E7060" letter-spacing="2.5">EXPERIENTIAL LEARNING · INDIA</text>
+</svg>
+</div><div class="meta">
+  <div class="mh"><span class="mn">01</span><span class="mt">Trade</span></div>
+  <p class="mc">The letter "F" is a bullish candlestick chart. Candle 1 (peach, narrow) = learning phase. Candle 2 (coral, wider + taller) = execution and growth. Finance students read the chart first, then see the brand initial.</p>
+  <span class="mu">Brand identity · Website header · App icon</span>
+</div></div>
+
+<!-- 02 SIGNAL -->
+<div class="card"><div class="disp">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80">
+  <defs>
+    <linearGradient id="d2wg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6F61"/><stop offset="100%" stop-color="#FF9A85"/></linearGradient>
+    <linearGradient id="d2bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#231110"/><stop offset="100%" stop-color="#150907"/></linearGradient>
+    <linearGradient id="d2sg" x1="10" y1="0" x2="62" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#FF6F61" stop-opacity="0.22"/>
+      <stop offset="38%"  stop-color="#FF6F61" stop-opacity="0.65"/>
+      <stop offset="55%"  stop-color="#FF6F61"/>
+      <stop offset="100%" stop-color="#FF9A85"/></linearGradient>
+  </defs>
+  <rect x="0" y="4" width="72" height="72" rx="18" fill="url(#d2bg)"/>
+  <rect x="0" y="4" width="72" height="72" rx="18" fill="none" stroke="rgba(255,111,97,0.16)" stroke-width="1"/>
+  <path d="M 10,47 L 24,47 L 27,43 L 30,50 L 34,10 L 37,62 L 41,37 L 43,47 C 52,44 58,33 62,19"
+        stroke="url(#d2sg)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="62" cy="19" r="4"  fill="#FF9A85"/>
+  <circle cx="62" cy="19" r="8"  fill="none" stroke="#FF9A85" stroke-width="1.5" opacity="0.28"/>
+  <circle cx="62" cy="19" r="13" fill="none" stroke="#FF9A85" stroke-width="1"   opacity="0.10"/>
+  <line x1="10" y1="47" x2="62" y2="47" stroke="rgba(255,111,97,0.07)" stroke-width="1"/>
+  <text y="47" font-family="'Sora','Helvetica Neue',Arial,sans-serif" font-size="28" letter-spacing="-0.5">
+    <tspan x="88" font-weight="300" fill="#FFB4A2">Fin</tspan><tspan font-weight="800" fill="url(#d2wg)">Experia</tspan></text>
+  <text x="88" y="63" font-family="'Inter',Arial,sans-serif" font-size="9" font-weight="600" fill="#9E7060" letter-spacing="2.5">EXPERIENTIAL LEARNING · INDIA</text>
+</svg>
+</div><div class="meta">
+  <div class="mh"><span class="mn">02</span><span class="mt">Signal</span></div>
+  <p class="mc">EKG flatline → dramatic spike → rising stock chart. One unbroken path, three chapters: dormant theory / the FinExperia jolt / ascending career. The flatline fades in; the glow dot at the end is where you're headed.</p>
+  <span class="mu">Social media · Banners · Merchandise</span>
+</div></div>
+
+<!-- 03 AXIS -->
+<div class="card"><div class="disp">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80">
+  <defs>
+    <linearGradient id="d3wg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6F61"/><stop offset="100%" stop-color="#FF9A85"/></linearGradient>
+    <linearGradient id="d3bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#231110"/><stop offset="100%" stop-color="#150907"/></linearGradient>
+    <linearGradient id="d3cg" x1="20" y1="62" x2="60" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#FF6F61" stop-opacity="0.4"/>
+      <stop offset="50%"  stop-color="#FF6F61"/>
+      <stop offset="100%" stop-color="#FF9A85"/></linearGradient>
+  </defs>
+  <rect x="0" y="4" width="72" height="72" rx="18" fill="url(#d3bg)"/>
+  <rect x="0" y="4" width="72" height="72" rx="18" fill="none" stroke="rgba(255,111,97,0.16)" stroke-width="1"/>
+  <line x1="20" y1="62" x2="20" y2="15" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+  <line x1="20" y1="62" x2="62" y2="62" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+  <polygon points="20,11 16,18 24,18" fill="#FF6F61" opacity="0.7"/>
+  <polygon points="65,62 58,58 58,66" fill="#FF6F61" opacity="0.7"/>
+  <line x1="17" y1="46" x2="23" y2="46" stroke="#FF6F61" stroke-width="1" opacity="0.22"/>
+  <line x1="17" y1="33" x2="23" y2="33" stroke="#FF6F61" stroke-width="1" opacity="0.22"/>
+  <line x1="35" y1="59" x2="35" y2="65" stroke="#FF6F61" stroke-width="1" opacity="0.22"/>
+  <line x1="49" y1="59" x2="49" y2="65" stroke="#FF6F61" stroke-width="1" opacity="0.22"/>
+  <path d="M 20,62 C 28,54 36,46 44,37 C 50,30 54,24 60,17"
+        stroke="url(#d3cg)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="30" cy="53" r="2.5" fill="#FF6F61" opacity="0.50"/>
+  <circle cx="42" cy="38" r="3.5" fill="#FF6F61" opacity="0.78"/>
+  <circle cx="57" cy="21" r="5"   fill="#FF9A85"/>
+  <circle cx="57" cy="21" r="9"   fill="none" stroke="#FF9A85" stroke-width="1.5" opacity="0.25"/>
+  <text y="47" font-family="'Sora','Helvetica Neue',Arial,sans-serif" font-size="28" letter-spacing="-0.5">
+    <tspan x="88" font-weight="300" fill="#FFB4A2">Fin</tspan><tspan font-weight="800" fill="url(#d3wg)">Experia</tspan></text>
+  <text x="88" y="63" font-family="'Inter',Arial,sans-serif" font-size="9" font-weight="600" fill="#9E7060" letter-spacing="2.5">EXPERIENTIAL LEARNING · INDIA</text>
+</svg>
+</div><div class="meta">
+  <div class="mh"><span class="mn">03</span><span class="mt">Axis</span></div>
+  <p class="mc">Financial coordinate axes (x/y with arrowheads) + a rising performance curve. Data nodes grow larger toward the peak. Bloomberg terminal precision. Measurement as a form of ambition.</p>
+  <span class="mu">Investor decks · Reports · Certificates</span>
+</div></div>
+
+<!-- 04 CLUSTER -->
+<div class="card"><div class="disp">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80">
+  <defs>
+    <linearGradient id="d4wg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6F61"/><stop offset="100%" stop-color="#FF9A85"/></linearGradient>
+  </defs>
+  <line x1="12" y1="63" x2="26" y2="50" stroke="#FF6F61" stroke-width="1"   opacity="0.15"/>
+  <line x1="26" y1="50" x2="40" y2="37" stroke="#FF6F61" stroke-width="1.5" opacity="0.25"/>
+  <line x1="40" y1="37" x2="54" y2="23" stroke="#FF6F61" stroke-width="2"   opacity="0.42"/>
+  <line x1="54" y1="23" x2="65" y2="14" stroke="#FF9A85" stroke-width="1"   opacity="0.28"/>
+  <line x1="54" y1="23" x2="63" y2="34" stroke="#FF9A85" stroke-width="1"   opacity="0.20"/>
+  <circle cx="12" cy="63" r="3.5" fill="#FF6F61" opacity="0.28"/>
+  <circle cx="26" cy="50" r="5"   fill="#FF6F61" opacity="0.48"/>
+  <circle cx="40" cy="37" r="7"   fill="#FF6F61" opacity="0.70"/>
+  <circle cx="54" cy="23" r="10"  fill="#FF6F61"/>
+  <circle cx="54" cy="23" r="15"  fill="none" stroke="#FF6F61" stroke-width="1.5" opacity="0.22"/>
+  <circle cx="54" cy="23" r="22"  fill="none" stroke="#FF6F61" stroke-width="1"   opacity="0.07"/>
+  <circle cx="65" cy="14" r="4"   fill="#FFB4A2" opacity="0.55"/>
+  <circle cx="63" cy="34" r="3"   fill="#FFB4A2" opacity="0.40"/>
+  <text y="47" font-family="'Sora','Helvetica Neue',Arial,sans-serif" font-size="28" letter-spacing="-0.5">
+    <tspan x="84" font-weight="300" fill="#FFB4A2">Fin</tspan><tspan font-weight="800" fill="url(#d4wg)">Experia</tspan></text>
+  <text x="84" y="63" font-family="'Inter',Arial,sans-serif" font-size="9" font-weight="600" fill="#9E7060" letter-spacing="2.5">EXPERIENTIAL LEARNING · INDIA</text>
+</svg>
+</div><div class="meta">
+  <div class="mh"><span class="mn">04</span><span class="mt">Cluster</span></div>
+  <p class="mc">Growing node constellation — each node larger than the last, rising diagonally. The career network you build: more experience = larger node. Radiating rings around the primary node show expanding influence.</p>
+  <span class="mu">Social profiles · Program collateral · Merchandise</span>
+</div></div>
+
+</div></section></div>
+
+<!-- LIGHT SECTION -->
+<div class="lw"><div class="wrap"><section class="sec">
+<div class="sec-rule"><span class="sl">Light Background</span></div>
+<div class="grid">
+
+<!-- 01 light -->
+<div class="card"><div class="disp">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80">
+  <defs>
+    <linearGradient id="l1wg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E8513D"/><stop offset="100%" stop-color="#FF6F61"/></linearGradient>
+    <linearGradient id="l1bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#231110"/><stop offset="100%" stop-color="#150907"/></linearGradient>
+  </defs>
+  <rect x="0" y="4" width="72" height="72" rx="18" fill="url(#l1bg)"/>
+  <rect x="0" y="4" width="72" height="72" rx="18" fill="none" stroke="rgba(255,111,97,0.2)" stroke-width="1"/>
+  <rect x="14" y="13" width="7" height="49" rx="3" fill="#FF6F61"/>
+  <line x1="29" y1="8"  x2="29" y2="14" stroke="#FFB4A2" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="21" y="14" width="16" height="8" rx="2" fill="#FFB4A2"/>
+  <line x1="29" y1="22" x2="29" y2="27" stroke="#FFB4A2" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="35" y1="28" x2="35" y2="35" stroke="#FF6F61" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="21" y="35" width="28" height="13" rx="2" fill="#FF6F61"/>
+  <line x1="35" y1="48" x2="35" y2="55" stroke="#FF6F61" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="12" y1="63" x2="60" y2="63" stroke="rgba(255,111,97,0.12)" stroke-width="1"/>
+  <text y="47" font-family="'Sora','Helvetica Neue',Arial,sans-serif" font-size="28" letter-spacing="-0.5">
+    <tspan x="88" font-weight="300" fill="#CC4A3A">Fin</tspan><tspan font-weight="800" fill="url(#l1wg)">Experia</tspan></text>
+  <text x="88" y="63" font-family="'Inter',Arial,sans-serif" font-size="9" font-weight="600" fill="#B07060" letter-spacing="2.5">EXPERIENTIAL LEARNING · INDIA</text>
+</svg>
+</div><div class="meta">
+  <div class="mh"><span class="mn">01</span><span class="mt">Trade</span></div>
+  <p class="mc">Dark icon preserves contrast on light surfaces. Wordmark shifts to deeper coral tones for readability.</p>
+  <span class="mu">Letterhead · Proposals · White papers</span>
+</div></div>
+
+<!-- 02 light -->
+<div class="card"><div class="disp">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80">
+  <defs>
+    <linearGradient id="l2wg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E8513D"/><stop offset="100%" stop-color="#FF6F61"/></linearGradient>
+    <linearGradient id="l2bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#231110"/><stop offset="100%" stop-color="#150907"/></linearGradient>
+    <linearGradient id="l2sg" x1="10" y1="0" x2="62" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#FF6F61" stop-opacity="0.22"/>
+      <stop offset="55%"  stop-color="#FF6F61"/>
+      <stop offset="100%" stop-color="#FF9A85"/></linearGradient>
+  </defs>
+  <rect x="0" y="4" width="72" height="72" rx="18" fill="url(#l2bg)"/>
+  <rect x="0" y="4" width="72" height="72" rx="18" fill="none" stroke="rgba(255,111,97,0.2)" stroke-width="1"/>
+  <path d="M 10,47 L 24,47 L 27,43 L 30,50 L 34,10 L 37,62 L 41,37 L 43,47 C 52,44 58,33 62,19"
+        stroke="url(#l2sg)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="62" cy="19" r="4"  fill="#FF9A85"/>
+  <circle cx="62" cy="19" r="8"  fill="none" stroke="#FF9A85" stroke-width="1.5" opacity="0.28"/>
+  <line x1="10" y1="47" x2="62" y2="47" stroke="rgba(255,111,97,0.07)" stroke-width="1"/>
+  <text y="47" font-family="'Sora','Helvetica Neue',Arial,sans-serif" font-size="28" letter-spacing="-0.5">
+    <tspan x="88" font-weight="300" fill="#CC4A3A">Fin</tspan><tspan font-weight="800" fill="url(#l2wg)">Experia</tspan></text>
+  <text x="88" y="63" font-family="'Inter',Arial,sans-serif" font-size="9" font-weight="600" fill="#B07060" letter-spacing="2.5">EXPERIENTIAL LEARNING · INDIA</text>
+</svg>
+</div><div class="meta">
+  <div class="mh"><span class="mn">02</span><span class="mt">Signal</span></div>
+  <p class="mc">Dark icon box maintains the EKG story on any background. Full-print compatible.</p>
+  <span class="mu">Course materials · Brochures · Print</span>
+</div></div>
+
+<!-- 03 light -->
+<div class="card"><div class="disp">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80">
+  <defs>
+    <linearGradient id="l3wg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E8513D"/><stop offset="100%" stop-color="#FF6F61"/></linearGradient>
+    <linearGradient id="l3bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#231110"/><stop offset="100%" stop-color="#150907"/></linearGradient>
+    <linearGradient id="l3cg" x1="20" y1="62" x2="60" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#FF6F61" stop-opacity="0.4"/>
+      <stop offset="50%"  stop-color="#FF6F61"/>
+      <stop offset="100%" stop-color="#FF9A85"/></linearGradient>
+  </defs>
+  <rect x="0" y="4" width="72" height="72" rx="18" fill="url(#l3bg)"/>
+  <rect x="0" y="4" width="72" height="72" rx="18" fill="none" stroke="rgba(255,111,97,0.2)" stroke-width="1"/>
+  <line x1="20" y1="62" x2="20" y2="15" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+  <line x1="20" y1="62" x2="62" y2="62" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+  <polygon points="20,11 16,18 24,18" fill="#FF6F61" opacity="0.7"/>
+  <polygon points="65,62 58,58 58,66" fill="#FF6F61" opacity="0.7"/>
+  <line x1="17" y1="46" x2="23" y2="46" stroke="#FF6F61" stroke-width="1" opacity="0.22"/>
+  <line x1="17" y1="33" x2="23" y2="33" stroke="#FF6F61" stroke-width="1" opacity="0.22"/>
+  <line x1="35" y1="59" x2="35" y2="65" stroke="#FF6F61" stroke-width="1" opacity="0.22"/>
+  <line x1="49" y1="59" x2="49" y2="65" stroke="#FF6F61" stroke-width="1" opacity="0.22"/>
+  <path d="M 20,62 C 28,54 36,46 44,37 C 50,30 54,24 60,17"
+        stroke="url(#l3cg)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="30" cy="53" r="2.5" fill="#FF6F61" opacity="0.50"/>
+  <circle cx="42" cy="38" r="3.5" fill="#FF6F61" opacity="0.78"/>
+  <circle cx="57" cy="21" r="5"   fill="#FF9A85"/>
+  <circle cx="57" cy="21" r="9"   fill="none" stroke="#FF9A85" stroke-width="1.5" opacity="0.25"/>
+  <text y="47" font-family="'Sora','Helvetica Neue',Arial,sans-serif" font-size="28" letter-spacing="-0.5">
+    <tspan x="88" font-weight="300" fill="#CC4A3A">Fin</tspan><tspan font-weight="800" fill="url(#l3wg)">Experia</tspan></text>
+  <text x="88" y="63" font-family="'Inter',Arial,sans-serif" font-size="9" font-weight="600" fill="#B07060" letter-spacing="2.5">EXPERIENTIAL LEARNING · INDIA</text>
+</svg>
+</div><div class="meta">
+  <div class="mh"><span class="mn">03</span><span class="mt">Axis</span></div>
+  <p class="mc">Self-contained on dark base. Ideal for charts, infographics, and financial reports where data-precision aesthetics matter.</p>
+  <span class="mu">Annual reports · Pitch decks · Data sheets</span>
+</div></div>
+
+<!-- 04 light -->
+<div class="card"><div class="disp">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80">
+  <defs>
+    <linearGradient id="l4wg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E8513D"/><stop offset="100%" stop-color="#FF6F61"/></linearGradient>
+  </defs>
+  <line x1="12" y1="63" x2="26" y2="50" stroke="#CC3D29" stroke-width="1"   opacity="0.20"/>
+  <line x1="26" y1="50" x2="40" y2="37" stroke="#CC3D29" stroke-width="1.5" opacity="0.32"/>
+  <line x1="40" y1="37" x2="54" y2="23" stroke="#CC3D29" stroke-width="2"   opacity="0.50"/>
+  <line x1="54" y1="23" x2="65" y2="14" stroke="#E8513D" stroke-width="1"   opacity="0.35"/>
+  <line x1="54" y1="23" x2="63" y2="34" stroke="#E8513D" stroke-width="1"   opacity="0.28"/>
+  <circle cx="12" cy="63" r="3.5" fill="#CC3D29" opacity="0.35"/>
+  <circle cx="26" cy="50" r="5"   fill="#CC3D29" opacity="0.55"/>
+  <circle cx="40" cy="37" r="7"   fill="#E8513D" opacity="0.78"/>
+  <circle cx="54" cy="23" r="10"  fill="#FF6F61"/>
+  <circle cx="54" cy="23" r="15"  fill="none" stroke="#FF6F61" stroke-width="1.5" opacity="0.22"/>
+  <circle cx="54" cy="23" r="22"  fill="none" stroke="#FF6F61" stroke-width="1"   opacity="0.08"/>
+  <circle cx="65" cy="14" r="4"   fill="#FF9A85" opacity="0.65"/>
+  <circle cx="63" cy="34" r="3"   fill="#FF9A85" opacity="0.50"/>
+  <text y="47" font-family="'Sora','Helvetica Neue',Arial,sans-serif" font-size="28" letter-spacing="-0.5">
+    <tspan x="84" font-weight="300" fill="#CC4A3A">Fin</tspan><tspan font-weight="800" fill="url(#l4wg)">Experia</tspan></text>
+  <text x="84" y="63" font-family="'Inter',Arial,sans-serif" font-size="9" font-weight="600" fill="#B07060" letter-spacing="2.5">EXPERIENTIAL LEARNING · INDIA</text>
+</svg>
+</div><div class="meta">
+  <div class="mh"><span class="mn">04</span><span class="mt">Cluster</span></div>
+  <p class="mc">Deeper coral on cream for maximum contrast. Node network reads clearly on all print applications.</p>
+  <span class="mu">Certificates · Merchandise · Social banners</span>
+</div></div>
+
+</div></section></div></div>
+
+<!-- PALETTE -->
+<div class="wrap"><section class="pal">
+  <p class="ptl">Brand Colour System</p>
+  <div class="swatches">
+    <div class="sw-item"><div class="sw" style="background:#FF6F61"></div><div class="si"><strong>Coral</strong><span>#FF6F61</span></div></div>
+    <div class="sw-item"><div class="sw" style="background:#FF9A85"></div><div class="si"><strong>Coral Light</strong><span>#FF9A85</span></div></div>
+    <div class="sw-item"><div class="sw" style="background:#E8513D"></div><div class="si"><strong>Coral Deep</strong><span>#E8513D</span></div></div>
+    <div class="sw-item"><div class="sw" style="background:#FFB4A2"></div><div class="si"><strong>Peach</strong><span>#FFB4A2</span></div></div>
+    <div class="sw-item"><div class="sw" style="background:#FFE3D8;outline:1px solid rgba(255,111,97,.28)"></div><div class="si"><strong>Blush</strong><span>#FFE3D8</span></div></div>
+    <div class="sw-item"><div class="sw" style="background:#0D0705"></div><div class="si"><strong>Ink</strong><span>#0D0705</span></div></div>
+    <div class="sw-item"><div class="sw" style="background:#221311"></div><div class="si"><strong>Surface</strong><span>#221311</span></div></div>
+    <div class="sw-item"><div class="sw" style="background:#FFF6F2;outline:1px solid rgba(255,111,97,.22)"></div><div class="si"><strong>Cream</strong><span>#FFF6F2</span></div></div>
+  </div>
+</section></div>
+
+</body>
+</html>

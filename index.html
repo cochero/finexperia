@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinExperia — India's First Experiential Finance Platform for Training Institutes</title>
+  <meta name="description" content="FinExperia is India's first experiential-learning platform for finance & commerce, built for training institutes. Give your trainees 3 financial years of real work experience in ~200 hours through a mentor-driven virtual office — and make them genuinely job-ready." />
+  <meta name="theme-color" content="#D4A53C" />
+  <link rel="canonical" href="https://www.finexperia.com/" />
+  <meta property="og:title" content="FinExperia — 3 Financial Years of Experience in 200 Hours, for Your Institute" />
+  <meta property="og:description" content="India's first experiential finance & commerce platform, built for training institutes. A mentor-driven virtual office that makes trainees job-ready." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.finexperia.com" />
+  <!-- TODO: convert og-image.svg → og-image.png (1200×630) for full Facebook/LinkedIn/X support -->
+  <meta property="og:image" content="https://www.finexperia.com/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="FinExperia — 3 financial years of real experience in 200 hours. For training institutes." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FinExperia — 3 Financial Years of Experience in 200 Hours" />
+  <meta name="twitter:description" content="India's first experiential finance & commerce platform, built for training institutes." />
+  <meta name="twitter:image" content="https://www.finexperia.com/og-image.svg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23131210'/%3E%3Cpath d='M32 13 L51 51 L39 51 L32 39 L25 51 L13 51 Z' fill='%23D4A53C'/%3E%3C/svg%3E" />
+  <noscript><style>.reveal,.reveal-left,.reveal-right{opacity:1!important;transform:none!important;}.jpanel[hidden]{display:block!important;}</style></noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== ICON SPRITE (gold line icons) ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <symbol id="i-ledger" viewBox="0 0 24 24"><path d="M6 3h11a1 1 0 0 1 1 1v17H7a2 2 0 0 1-2-2V4a1 1 0 0 1 1-1z"/><path d="M9 3v18"/><path d="M12 8h3M12 12h3"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2z"/><path d="M9 7h6M9 11h6M9 15h4"/></symbol>
+    <symbol id="i-statement" viewBox="0 0 24 24"><path d="M7 2h8l4 4v16H7z"/><path d="M14 2v5h5"/><path d="M10 13h6M10 17h6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M16 16l5 5"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M7 20v-6M12 20V9M17 20v-9"/></symbol>
+    <symbol id="i-valuation" viewBox="0 0 24 24"><path d="M3 17l5-5 4 4 9-10"/><path d="M16 6h5v5"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M9 13l-2 8 5-3 5 3-2-8"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 5 13h6l-1 9 9-12h-6z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4a2 2 0 0 1 2-2h12v16H7a2 2 0 0 0-2 2z"/><path d="M5 20a2 2 0 0 1 2-2h12"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><path d="M16 5.2a3 3 0 0 1 0 5.6"/><path d="M17.5 20a5.5 5.5 0 0 0-3-4.9"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  </defs></svg>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-bar" id="scrollBar" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="top">
+    <div class="nav-pill" id="navPill">
+      <a href="#top" class="brand" aria-label="FinExperia home">
+        <img class="brand-mark" src="finexperia-mark.svg" alt="" width="34" height="34" />
+        <span class="brand-text"><span class="brand-name">FinExperia<sup class="brand-tm">™</sup></span><span class="brand-tagline">Proven Path to Growth</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#platform">The Platform</a>
+        <a href="#program">The Experience</a>
+        <a href="#aitools">AI Tools</a>
+        <a href="#institutes">For Institutes</a>
+        <a href="#outcomes">Outcomes</a>
+      </nav>
+      <div class="nav-end">
+        <a href="#contact" class="btn btn-coral">Book a demo</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-a"></div>
+        <div class="blob blob-b"></div>
+        <div class="blob blob-c"></div>
+      </div>
+
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="india-badge">🇮🇳 <span>India's First Experiential Finance Platform · For Institutes</span></div>
+          <h1 class="hero-h1 hero-h1-v2">
+            <span class="h1-kicker">Give your trainees</span>
+            <span class="h1-big" style="font-size:clamp(2.8rem,7vw,5rem);line-height:1.0">3 financial years</span>
+            <span class="h1-tail">of real experience — in just 200 hours.</span>
+          </h1>
+          <p class="hero-lede">
+            FinExperia is a turnkey platform for training institutes. Replace classroom theory with a
+            mentor-driven <strong>virtual office</strong>, where your trainees work as employees across
+            three real-company simulations — and graduate genuinely job-ready, with résumés full of
+            real finance &amp; accounts experience.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-coral btn-lg">Book a demo</a>
+            <a href="#contact" class="btn btn-ghost btn-lg" data-magnet>Download the brochure →</a>
+          </div>
+          <div class="hero-urgency">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>India's <strong>only</strong> platform of its kind &nbsp;·&nbsp; built <strong>exclusively for institutes</strong></span>
+          </div>
+          <div class="hero-trust">
+            <div class="ht-item"><strong>3 yrs</strong><span>Experience gained</span></div>
+            <div class="ht-sep" aria-hidden="true"></div>
+            <div class="ht-item"><strong>200 hrs</strong><span>Total program</span></div>
+            <div class="ht-sep" aria-hidden="true"></div>
+            <div class="ht-item"><strong>3 roles</strong><span>Junior → Senior → CFO</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual has-diagram" aria-hidden="true">
+          <div class="hero-diagram">
+            <div class="hd-head">
+              <span class="hd-eyebrow">The journey your trainees take</span>
+              <span class="hd-badge">3 yrs · 200 hrs</span>
+            </div>
+            <ol class="hd-steps">
+              <li class="hd-step">
+                <span class="hd-num">1</span>
+                <span class="hd-ic"><svg class="ico"><use href="#i-ledger"/></svg></span>
+                <span class="hd-body"><span class="hd-role">Junior Associate <em>· Organisation 1</em></span><span class="hd-task">A full year of books → finalisation</span></span>
+              </li>
+              <li class="hd-step">
+                <span class="hd-num">2</span>
+                <span class="hd-ic"><svg class="ico"><use href="#i-receipt"/></svg></span>
+                <span class="hd-body"><span class="hd-role">Senior Accountant <em>· Organisation 2</em></span><span class="hd-task">GST · TDS · PF · ESI · payroll</span></span>
+              </li>
+              <li class="hd-step">
+                <span class="hd-num">3</span>
+                <span class="hd-ic"><svg class="ico"><use href="#i-valuation"/></svg></span>
+                <span class="hd-body"><span class="hd-role">Finance Manager / CFO <em>· Organisation 3</em></span><span class="hd-task">MIS, budgeting, forecasting &amp; analysis</span></span>
+              </li>
+            </ol>
+            <div class="hd-foot"><svg class="ico"><use href="#i-eye"/></svg> Every task mentor-reviewed &amp; fully tracked</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span>Scroll to explore</span>
+        <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+      </div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span>India's First</span><i>◆</i>
+        <span>Built for Institutes</span><i>◆</i>
+        <span>The Virtual Office</span><i>◆</i>
+        <span>3 Financial Years · 200 Hours</span><i>◆</i>
+        <span>Junior → Senior → CFO</span><i>◆</i>
+        <span>GST · TDS · PF · ESI · Payroll</span><i>◆</i>
+        <span>Mentor-Driven · Task-Based</span><i>◆</i>
+        <span>AI-Powered</span><i>◆</i>
+        <span>Fully Monitored</span><i>◆</i>
+        <span>India's First</span><i>◆</i>
+        <span>Built for Institutes</span><i>◆</i>
+        <span>The Virtual Office</span><i>◆</i>
+        <span>3 Financial Years · 200 Hours</span><i>◆</i>
+        <span>Junior → Senior → CFO</span><i>◆</i>
+        <span>GST · TDS · PF · ESI · Payroll</span><i>◆</i>
+        <span>Mentor-Driven · Task-Based</span><i>◆</i>
+        <span>AI-Powered</span><i>◆</i>
+        <span>Fully Monitored</span><i>◆</i>
+      </div>
+    </div>
+
+    <!-- ===== PROOF / PILLARS ===== -->
+    <section class="proof-section" id="proof">
+      <div class="container">
+        <p class="proof-kicker reveal">A new category of finance training</p>
+        <div class="proof-mentors reveal">
+          <div class="mentor">
+            <span class="mentor-av"><svg class="ico"><use href="#i-award"/></svg></span>
+            <div><strong>India's First</strong><span>Experiential finance platform</span></div>
+          </div>
+          <div class="mentor">
+            <span class="mentor-av"><svg class="ico"><use href="#i-book"/></svg></span>
+            <div><strong>Built for Institutes</strong><span>100% B2B — a platform for you</span></div>
+          </div>
+          <div class="mentor">
+            <span class="mentor-av"><svg class="ico"><use href="#i-users"/></svg></span>
+            <div><strong>Virtual Office</strong><span>Trainees work as real employees</span></div>
+          </div>
+          <div class="mentor">
+            <span class="mentor-av"><svg class="ico"><use href="#i-eye"/></svg></span>
+            <div><strong>Fully Monitored</strong><span>Every task tracked — no dropouts</span></div>
+          </div>
+        </div>
+        <div class="proof-metrics reveal">
+          <span><strong>3</strong> financial years of experience</span>
+          <span><strong>200</strong> hours, end to end</span>
+          <span><strong>3</strong> real-company roles</span>
+          <span><strong>100%</strong> experiential — zero lectures</span>
+        </div>
+        <p class="proof-note">Delivered through your institute, run by your mentors — with our system, content and playbook.</p>
+      </div>
+    </section>
+
+    <!-- ===== WHY (institutes) ===== -->
+    <section class="method-section" id="why">
+      <div class="container">
+        <div class="sec-label">01</div>
+        <div class="sec-head centered reveal">
+          <span class="eyebrow">Why Institutes Switch</span>
+          <h2>Stop teaching finance. Let your trainees <em class="coral-em">do</em> it.</h2>
+          <p>Classroom training graduates students who can define a ratio but have never run a ledger — so placements stall and résumés look identical. FinExperia moves your institute to a mentor-driven, task-based model where trainees gain real experience employers believe in.</p>
+        </div>
+
+        <div class="method-compare reveal">
+          <div class="mc-col mc-trad">
+            <div class="mc-top"><span class="mc-icon"><svg class="ico"><use href="#i-book"/></svg></span><h3>Traditional Training</h3></div>
+            <ul class="mc-list mc-bad">
+              <li>Lectures and theory students forget by exam day</li>
+              <li>Graduates with zero real experience for a résumé</li>
+              <li>Hard to stand out from every other institute</li>
+              <li>Mid-course dropouts your team can't see coming</li>
+              <li>Placement rates that are tough to move</li>
+            </ul>
+            <div class="mc-foot">❌ Hard to differentiate · Hard to place</div>
+          </div>
+          <div class="mc-vs" aria-hidden="true"><span>VS</span></div>
+          <div class="mc-col mc-fx">
+            <div class="fx-pill">The FinExperia Platform</div>
+            <div class="mc-top"><span class="mc-icon"><svg class="ico"><use href="#i-bolt"/></svg></span><h3>Mentor-Driven Virtual Office</h3></div>
+            <ul class="mc-list mc-good">
+              <li>Trainees work real company tasks as employees</li>
+              <li>Résumé-ready experience — 3 financial years' worth</li>
+              <li>India's only platform of its kind to offer it</li>
+              <li>A structured system engineered against dropouts</li>
+              <li>Higher placements — and a reason to enrol with you</li>
+            </ul>
+            <div class="mc-foot mc-foot-fx">✅ A category of one · Job-ready graduates</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PLATFORM / VIRTUAL OFFICE ===== -->
+    <section class="skills-section" id="platform">
+      <div class="container">
+        <div class="sec-label">02</div>
+        <div class="sec-head centered reveal">
+          <span class="eyebrow">The Virtual Office</span>
+          <h2>Not a course. A <em class="coral-em">virtual organisation</em> your trainees work inside.</h2>
+          <p>FinExperia turns your classroom into a virtual company. Trainees don't attend lectures — they hold a role, pick up real tasks, and are guided task-by-task by a mentor who supplies exactly the knowledge each job needs. It's how people actually learn to work in a finance department.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <span class="skill-n"><svg class="ico"><use href="#i-users"/></svg></span>
+            <h3>Work as an employee</h3>
+            <p>Each trainee holds a real role in a virtual organisation — not a seat in a classroom — and is accountable for the work, just like a first job.</p>
+          </div>
+          <div class="skill-card reveal">
+            <span class="skill-n"><svg class="ico"><use href="#i-ledger"/></svg></span>
+            <h3>Task-based, real work</h3>
+            <p>Every day is industry tasks across a full financial year, April to March — the actual work an accounts &amp; finance team does, not hypothetical case studies.</p>
+          </div>
+          <div class="skill-card reveal">
+            <span class="skill-n"><svg class="ico"><use href="#i-bolt"/></svg></span>
+            <h3>Mentor-driven</h3>
+            <p>The mentor delivers just the knowledge each task needs and shows trainees how to operate inside an organisation — guidance on demand, not a syllabus to sit through.</p>
+          </div>
+          <div class="skill-card reveal">
+            <span class="skill-n"><svg class="ico"><use href="#i-eye"/></svg></span>
+            <h3>Fully monitored</h3>
+            <p>Every activity is tracked on a dashboard, so progress is visible, mentors can step in early, and the structure is engineered so trainees don't drop out.</p>
+          </div>
+        </div>
+
+        <div class="employers-layout" style="margin-top:3.5rem">
+          <div class="emp-copy reveal-left">
+            <h2>Total visibility for your institute</h2>
+            <p>Because the whole program runs on the platform, you see exactly what every trainee is doing — which organisation they're in, which tasks they've completed, and where they need help. No guesswork, no silent dropouts.</p>
+            <ul class="emp-list">
+              <li>Live status for every trainee across all three organisations</li>
+              <li>Task completion and mentor-review history in one place</li>
+              <li>A structured path that keeps each cohort moving together</li>
+            </ul>
+            <a href="#contact" class="btn btn-coral">See the platform →</a>
+          </div>
+          <div class="emp-panel reveal-right">
+            <div class="emp-head"><span>Trainee</span><span>Role</span><span>Status</span></div>
+            <div class="emp-row"><strong>Aarav P.</strong><span class="ep-count">CFO</span><span class="ep-status placed">On track</span></div>
+            <div class="emp-row"><strong>Diya S.</strong><span class="ep-count">Senior</span><span class="ep-status">In progress</span></div>
+            <div class="emp-row"><strong>Karan M.</strong><span class="ep-count">Senior</span><span class="ep-status">In progress</span></div>
+            <div class="emp-row"><strong>Neha R.</strong><span class="ep-count">Junior</span><span class="ep-status">In progress</span></div>
+            <p class="emp-note">Illustrative dashboard — every task and mentor review is logged per trainee.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROGRAM (3 organisations) ===== -->
+    <section class="programs-section program-section" id="program">
+      <div class="container">
+        <div class="sec-label">03</div>
+        <div class="sec-head centered reveal">
+          <span class="eyebrow">The Experience</span>
+          <h2>Three companies. Three roles. Three financial years.</h2>
+        </div>
+
+        <div class="program-band reveal">
+          <div class="pb-copy">
+            <span class="pb-tag">Finance &amp; Accounts Program</span>
+            <h3>From Junior to CFO — in one program</h3>
+            <p>Your trainees complete a full financial year of real work at three different organisations, rising from junior associate to finance manager. By the end they hold three financial years of experience — and the judgment that comes with it, all in roughly 200 hours.</p>
+            <a href="#contact" class="btn btn-coral">Book a demo →</a>
+          </div>
+          <div class="pb-facts">
+            <div class="pb-fact"><strong>3</strong><span>financial years</span></div>
+            <div class="pb-fact"><strong>200</strong><span>hours</span></div>
+            <div class="pb-fact"><strong>3</strong><span>roles</span></div>
+          </div>
+        </div>
+
+        <!-- Interactive: click a role to reveal the organisation -->
+        <div class="journey reveal" id="journey">
+          <div class="journey-rail journey-rail-3" role="tablist" aria-label="Three-organisation career journey">
+            <button class="jnode is-active" role="tab" aria-selected="true" data-mod="0"><span class="jnode-dot"></span><span class="jnode-wk">Organisation 1</span><span class="jnode-code">Junior</span></button>
+            <button class="jnode" role="tab" aria-selected="false" data-mod="1"><span class="jnode-dot"></span><span class="jnode-wk">Organisation 2</span><span class="jnode-code">Senior</span></button>
+            <button class="jnode" role="tab" aria-selected="false" data-mod="2"><span class="jnode-dot"></span><span class="jnode-wk">Organisation 3</span><span class="jnode-code">Manager / CFO</span></button>
+          </div>
+
+          <div class="journey-panels">
+            <article class="jpanel" data-mod="0">
+              <div class="jp-icon"><svg class="ico"><use href="#i-ledger"/></svg></div>
+              <div class="jp-body">
+                <div class="jp-meta"><span class="jp-code">Organisation 1 · Junior Associate</span><span class="jp-wk">Full financial year · Apr–Mar</span></div>
+                <h3>Learn how an accounts department actually runs</h3>
+                <p>Trainees join their first company as a junior and carry a complete financial year of books — recording transactions, maintaining ledgers, running reconciliations and taking the year all the way to finalisation. They graduate this stage knowing how day-to-day accounting really works, with AI tools speeding up the routine so they focus on getting it right.</p>
+                <span class="mod-skill">Day-to-day accounting &amp; year-end finalisation</span>
+              </div>
+            </article>
+            <article class="jpanel" data-mod="1" hidden>
+              <div class="jp-icon"><svg class="ico"><use href="#i-receipt"/></svg></div>
+              <div class="jp-body">
+                <div class="jp-meta"><span class="jp-code">Organisation 2 · Senior Accountant</span><span class="jp-wk">Full financial year · Apr–Mar</span></div>
+                <h3>Own statutory compliance, end to end</h3>
+                <p>Now experienced, trainees step up to a senior role at a second company and take charge of compliance — GST, TDS, PF, ESI and payroll — working real filing cycles across the year. They learn to spot mismatches before they become notices and to keep a company clean and audit-ready.</p>
+                <span class="mod-skill">GST · TDS · PF · ESI · payroll compliance</span>
+              </div>
+            </article>
+            <article class="jpanel" data-mod="2" hidden>
+              <div class="jp-icon"><svg class="ico"><use href="#i-valuation"/></svg></div>
+              <div class="jp-body">
+                <div class="jp-meta"><span class="jp-code">Organisation 3 · Finance Manager / CFO</span><span class="jp-wk">Full financial year · Apr–Mar</span></div>
+                <h3>Step up to analysis, strategy and the numbers that lead</h3>
+                <p>In their third company trainees take the senior-manager / CFO seat — building MIS and reports, budgets and forecasts, reviewing the work done at junior and senior levels, and shaping the company's future plans. This is where doing becomes deciding: the analytical judgment that makes a finance professional valuable.</p>
+                <span class="mod-skill">MIS, budgeting, forecasting &amp; analysis</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== AI TOOLSTACK ===== -->
+    <section class="aitools-section" id="aitools">
+      <div class="container">
+        <div class="sec-label">04</div>
+        <div class="sec-head centered reveal">
+          <span class="eyebrow">AI-Age Skills</span>
+          <h2>Your trainees graduate fluent in the tools finance teams now run on.</h2>
+          <p>Across all three organisations, trainees use the same AI copilots a modern finance team uses every day — to extract, reconcile, draft and analyse — then apply their own judgment. They don't just gain experience; they gain AI-age experience that makes them useful from day one.</p>
+        </div>
+
+        <div class="ai-grid">
+          <div class="ai-card reveal">
+            <span class="ai-cat">Spreadsheet AI</span>
+            <h3>Microsoft Copilot in Excel</h3>
+            <p>Turns plain-English prompts into formulas, PivotTables and trend explanations, and flags anomalies. Trainees take a messy trial balance, prompt a variance analysis, then verify every formula by hand to learn the logic, not just the shortcut.</p>
+          </div>
+          <div class="ai-card reveal">
+            <span class="ai-cat">LLM analysis &amp; commentary</span>
+            <h3>ChatGPT (OpenAI)</h3>
+            <p>Explains accounting treatments, drafts management commentary and stress-tests financial logic; its data-analysis mode turns a CSV into charts plus insight — always on de-identified or simulated data, never live client records.</p>
+          </div>
+          <div class="ai-card reveal">
+            <span class="ai-cat">Long-document reasoning</span>
+            <h3>Claude (Anthropic)</h3>
+            <p>Strong at long-document reasoning and careful financial writing — annual reports, agreements, audit papers — with low hallucination on numbers when given source data. Trainees extract the essentials, then cross-check every figure to source.</p>
+          </div>
+          <div class="ai-card reveal">
+            <span class="ai-cat">BI &amp; dashboards</span>
+            <h3>Power BI with Copilot</h3>
+            <p>Builds DAX measures, generates report pages from a prompt and surfaces narrative insights. Trainees build a receivables-ageing and cash-flow dashboard and present it as a real MIS deliverable.</p>
+          </div>
+          <div class="ai-card reveal">
+            <span class="ai-cat">Ledger / accounting software</span>
+            <h3>Tally Prime <span style="font-weight:400">(TDL automation)</span></h3>
+            <p>India's most widely used accounting and GST software, with bank-reconciliation automation, e-invoicing and import via TDL connectors. Trainees run a full books-of-accounts cycle, then export into Excel / Power BI.</p>
+          </div>
+          <div class="ai-card reveal">
+            <span class="ai-cat">Cloud accounting</span>
+            <h3>Zoho Books <span style="font-weight:400">(Zia AI)</span></h3>
+            <p>A cloud platform popular with Indian SMEs and startups, with Zia AI for cash-flow forecasting, anomaly detection and automated bank-feed categorisation. Trainees set up a startup's books and advise on a runway scenario.</p>
+          </div>
+          <div class="ai-card reveal">
+            <span class="ai-cat">Reconciliation automation</span>
+            <h3>AI Bank Reconciliation</h3>
+            <p>Tools like RazorpayX and Razorpay Recon auto-match bank-feed and payout lines against ledger entries and surface exceptions. Trainees run AI matching, then investigate and document every flagged exception.</p>
+          </div>
+          <div class="ai-card reveal">
+            <span class="ai-cat">OCR / document AI</span>
+            <h3>Document-Extraction AI <span style="font-weight:400">(Nanonets)</span></h3>
+            <p>Reads invoices, receipts and bank statements — even scanned or handwritten — and extracts fields like GSTIN, amounts and line items. Trainees validate the extracted GST and totals, then feed clean data into Tally.</p>
+          </div>
+        </div>
+
+        <h3 class="steps-title" style="margin-top:3.6rem">How AI shows up in their workday</h3>
+        <div class="ai-grid ai-grid-3">
+          <div class="ai-card reveal">
+            <span class="ai-cat">Faster</span>
+            <h3>The routine, automated</h3>
+            <p>Extraction, reconciliation and formatting that used to eat hours now take minutes — Excel Copilot, document-AI and auto-reconciliation clear the busywork, so no day is lost to data entry.</p>
+          </div>
+          <div class="ai-card reveal">
+            <span class="ai-cat">Sharper</span>
+            <h3>Answers &amp; drafts on demand</h3>
+            <p>Accounting treatments explained, management commentary and memos drafted in seconds with ChatGPT and Claude — then verified by hand, so the reasoning stays the trainee's own.</p>
+          </div>
+          <div class="ai-card reveal">
+            <span class="ai-cat">Stronger</span>
+            <h3>Judgment, amplified</h3>
+            <p>With the grunt work gone, trainees spend their hours on analysis and decisions — performing like seniors sooner, and standing out in every review.</p>
+          </div>
+        </div>
+        <p class="ai-closing reveal">The result: a fresher who functions like a <strong>proper, high-performing employee</strong> from day one — not a data-entry clerk, but an analyst who directs the tools.</p>
+      </div>
+    </section>
+
+    <!-- ===== FOR INSTITUTES (how it works + gains) ===== -->
+    <section class="programs-section" id="institutes">
+      <div class="container">
+        <div class="sec-label">05</div>
+        <div class="sec-head centered reveal">
+          <span class="eyebrow">For Institutes</span>
+          <h2>Turnkey to launch. Built to grow your institute.</h2>
+          <p>You don't rebuild your curriculum or retrain your faculty from scratch. We provide the platform, the virtual organisations, the task content and the mentor playbook — your team simply mentors.</p>
+        </div>
+
+        <ol class="steps-grid">
+          <li class="step-card reveal"><span class="step-n">01</span><h4>Partner with us</h4><p>A short onboarding call. We understand your batch, goals and timelines, and tailor the program to your institute.</p></li>
+          <li class="step-card reveal"><span class="step-n">02</span><h4>We set up &amp; train your mentors</h4><p>Virtual organisations, tasks and a mentor playbook arrive ready to run. We get your faculty confident as mentors, fast.</p></li>
+          <li class="step-card reveal"><span class="step-n">03</span><h4>Trainees work the three organisations</h4><p>Task by task, fully monitored, over roughly 200 hours — Junior to Senior to CFO, gaining three financial years of experience.</p></li>
+          <li class="step-card reveal"><span class="step-n">04</span><h4>Placements rise</h4><p>Trainees graduate job-ready with real experience on their résumés — and your institute gets a story enrolments are drawn to.</p></li>
+        </ol>
+
+        <h3 class="steps-title" style="margin-top:3.4rem">What your institute gains</h3>
+        <div class="ai-grid">
+          <div class="ai-card reveal">
+            <span class="ai-cat">Differentiation</span>
+            <h3>A category of one</h3>
+            <p>Offer something no other institute in India can — the first experiential finance &amp; commerce platform. An instant reason to choose you.</p>
+          </div>
+          <div class="ai-card reveal">
+            <span class="ai-cat">Placements</span>
+            <h3>Job-ready graduates</h3>
+            <p>Résumé-ready experience employers actually believe in means more interviews, more offers, and a placement record you can market.</p>
+          </div>
+          <div class="ai-card reveal">
+            <span class="ai-cat">Retention</span>
+            <h3>Dropout-resistant by design</h3>
+            <p>A structured, monitored system keeps every trainee engaged and moving — so batches finish, and your completion rates climb.</p>
+          </div>
+          <div class="ai-card reveal">
+            <span class="ai-cat">Control</span>
+            <h3>Total visibility</h3>
+            <p>Track every trainee's activity in real time from one dashboard. Mentors step in early; nothing slips through the cracks.</p>
+          </div>
+          <div class="ai-card reveal">
+            <span class="ai-cat">Modern curriculum</span>
+            <h3>AI-age, no extra effort</h3>
+            <p>Trainees master the AI tools modern finance teams use — built into the program, with nothing extra for your faculty to prepare.</p>
+          </div>
+          <div class="ai-card reveal">
+            <span class="ai-cat">Growth</span>
+            <h3>Turnkey &amp; revenue-positive</h3>
+            <p>We bring the system and content; you bring the trainees. Strengthen your brand, raise your fees with confidence, and grow.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OUTCOMES ===== -->
+    <section class="outcomes-section" id="outcomes">
+      <div class="container">
+        <div class="sec-label light">06</div>
+        <span class="eyebrow eyebrow-dim">Outcomes</span>
+        <h2 class="outcomes-h2">Experience that makes trainees <em class="coral-em">hireable</em> — and institutes stand out.</h2>
+        <div class="stats-grid">
+          <div class="big-stat">
+            <div class="stat-val"><span class="stat-n" data-target="3">0</span></div>
+            <span class="stat-lbl">Financial years of experience</span>
+          </div>
+          <div class="big-stat">
+            <div class="stat-val"><span class="stat-n" data-target="200">0</span></div>
+            <span class="stat-lbl">Hours, start to finish</span>
+          </div>
+          <div class="big-stat">
+            <div class="stat-val"><span class="stat-n" data-target="3">0</span></div>
+            <span class="stat-lbl">Real-company roles</span>
+          </div>
+          <div class="big-stat">
+            <div class="stat-val"><span class="stat-n" data-target="100">0</span><span class="stat-sym">%</span></div>
+            <span class="stat-lbl">Experiential — no lectures</span>
+          </div>
+        </div>
+        <figure class="testimonial reveal">
+          <div class="quote-glyph">"</div>
+          <blockquote>
+            We replaced our classroom accounting module with FinExperia. For the first time our students
+            walk into interviews with real work to talk about — a full year of books, GST and payroll
+            filed, an MIS deck they built themselves. Our placement conversations changed overnight, and
+            the platform practically runs itself; our faculty simply mentor.
+          </blockquote>
+          <figcaption>
+            <span class="t-av">D</span>
+            <!-- TODO: replace with a real partner-institute testimonial -->
+            <span><strong>Director</strong><em>Partner Institute · (representative)</em></span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="sec-label">07</div>
+        <div class="sec-head centered reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions from institutes, answered</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item"><summary>Who is FinExperia for?</summary><p>Training institutes, colleges and academies that teach finance, accounting and commerce. FinExperia is a B2B platform you offer to your trainees — it is not sold directly to students. If you run finance/commerce programs, this upgrades them to experiential learning.</p></details>
+          <details class="faq-item"><summary>Do our faculty need to be finance experts to run it?</summary><p>Your faculty act as mentors, and we equip them with a complete playbook — the tasks, the knowledge each task needs, and how to guide trainees. The platform supplies the structure and content; your mentors guide and review.</p></details>
+          <details class="faq-item"><summary>How long is the program?</summary><p>Roughly 200 hours of experiential work, through which a trainee gains the equivalent of three financial years of real experience — one full financial year (April–March) at each of three organisations.</p></details>
+          <details class="faq-item"><summary>How is it delivered?</summary><p>As a virtual office on the platform. Trainees log in, hold a role, and complete real tasks across three simulated organisations. It runs online and fits alongside your existing schedule.</p></details>
+          <details class="faq-item"><summary>How do we monitor trainees and prevent dropouts?</summary><p>Every trainee's activity — tasks completed, mentor reviews, current organisation and role — is visible on a dashboard. The program is structured so cohorts move together and mentors can step in early, which is what keeps dropouts down.</p></details>
+          <details class="faq-item"><summary>How do we get started, and what does it cost?</summary><p>Book a demo and we'll walk your team through the platform and tailor a plan to your batch size and goals. Pricing is on a partnership basis — reach out via the form below and we'll respond within 24 hours.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-layout">
+
+        <div class="contact-info">
+          <div class="sec-label">08</div>
+          <span class="eyebrow">Partner With Us</span>
+          <h2>Bring FinExperia to your institute</h2>
+          <p>Tell us about your institute and we'll set up a demo. Prefer the details first? Choose "Send me the brochure &amp; pricing" below and we'll email it across.</p>
+
+          <div class="contact-phone-block">
+            <span class="ph-label">Talk to our partnerships team</span>
+            <a href="tel:+919429694291" class="ph-num">+91 94296 94291</a>
+            <span class="ph-hours">Mon – Sat &nbsp;·&nbsp; 9 AM – 7 PM IST</span>
+          </div>
+
+          <div class="contact-details">
+            <div class="cd-row">
+              <span class="cd-icon"><svg class="ico"><use href="#i-pin"/></svg></span>
+              <span>India (Pan-India, fully online)</span>
+            </div>
+            <div class="cd-row">
+              <span class="cd-icon"><svg class="ico"><use href="#i-mail"/></svg></span>
+              <!-- TODO: Replace with real email -->
+              <a href="mailto:partners@finexperia.com">partners@finexperia.com</a>
+            </div>
+            <div class="cd-row">
+              <span class="cd-icon"><svg class="ico"><use href="#i-clock"/></svg></span>
+              <span>Response within 24 hours</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <!--
+            WEB3FORMS SETUP (free — no backend needed):
+            1. Go to https://web3forms.com and sign up
+            2. Enter YOUR email address to receive submissions
+            3. Copy the access_key you receive
+            4. Replace "TODO_YOUR_WEB3FORMS_ACCESS_KEY" with that key
+          -->
+          <form id="contactForm" class="contact-form" novalidate>
+            <input type="hidden" name="access_key" value="TODO_YOUR_WEB3FORMS_ACCESS_KEY" />
+            <input type="hidden" name="subject"   value="New FinExperia Institute Partnership Enquiry" />
+            <input type="hidden" name="from_name" value="FinExperia Website" />
+            <!-- honeypot anti-spam: bots fill this; humans never see it -->
+            <input type="checkbox" name="botcheck" class="hp-field" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <div class="cf-row">
+              <div class="cf-field">
+                <label for="cf-org">Institute / organisation *</label>
+                <input id="cf-org" name="org" type="text" placeholder="Your institute's name" required autocomplete="organization" />
+              </div>
+              <div class="cf-field">
+                <label for="cf-name">Your name *</label>
+                <input id="cf-name" name="name" type="text" placeholder="Contact person" required autocomplete="name" />
+              </div>
+            </div>
+            <div class="cf-row">
+              <div class="cf-field">
+                <label for="cf-email">Email address *</label>
+                <input id="cf-email" name="email" type="email" placeholder="you@institute.com" required autocomplete="email" />
+              </div>
+              <div class="cf-field">
+                <label for="cf-phone">Phone number</label>
+                <input id="cf-phone" name="phone" type="tel" placeholder="+91 XXXXX XXXXX" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="cf-row">
+              <div class="cf-field">
+                <label for="cf-city">City / state</label>
+                <input id="cf-city" name="city" type="text" placeholder="e.g. Pune, Maharashtra" autocomplete="address-level2" />
+              </div>
+              <div class="cf-field">
+                <label for="cf-role">I am…</label>
+                <select id="cf-role" name="role">
+                  <option value="">Select an option…</option>
+                  <option>Book a demo for my institute</option>
+                  <option>Send me the brochure &amp; pricing</option>
+                  <option>Institute owner / director</option>
+                  <option>Trainer / faculty</option>
+                  <option>Placement / training head</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="cf-field">
+              <label for="cf-msg">Anything we should know?</label>
+              <textarea id="cf-msg" name="message" rows="4" placeholder="Tell us about your institute, your finance/commerce batches, and what you're looking for…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-coral btn-lg btn-block" id="cfSubmit">
+              <span class="btn-label">Book a demo</span>
+              <span class="btn-spin" aria-hidden="true"></span>
+            </button>
+            <p class="cf-status" id="cfStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-layout">
+      <div class="footer-brand">
+        <a href="#top" class="brand">
+          <img class="brand-mark" src="finexperia-mark.svg" alt="" width="34" height="34" />
+          <span class="brand-text"><span class="brand-name">FinExperia<sup class="brand-tm">™</sup></span><span class="brand-tagline">Proven Path to Growth</span></span>
+        </a>
+        <p>India's first experiential-learning platform for finance &amp; commerce — built for training institutes. Give your trainees real experience, and a proven path to growth.</p>
+      </div>
+      <nav class="footer-col" aria-label="Platform">
+        <h4>Platform</h4>
+        <a href="#why">Why FinExperia</a>
+        <a href="#platform">The Virtual Office</a>
+        <a href="#program">The Experience</a>
+        <a href="#aitools">AI Tools</a>
+      </nav>
+      <nav class="footer-col" aria-label="Institutes">
+        <h4>Institutes</h4>
+        <a href="#institutes">For Institutes</a>
+        <a href="#outcomes">Outcomes</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Book a demo</a>
+      </nav>
+      <nav class="footer-col" aria-label="Legal">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Partnership Terms</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> FinExperia. All rights reserved.</p>
+      <p>Made in India 🇮🇳</p>
+    </div>
+  </footer>
+
+  <!-- ===== STICKY CTA (appears on scroll) ===== -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <div class="container sticky-cta-inner">
+      <div class="sticky-cta-text">
+        <strong>FinExperia for your institute</strong>
+        <span>3 financial years of experience in 200 hours</span>
+      </div>
+      <a href="#contact" class="btn btn-coral">Book a demo</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

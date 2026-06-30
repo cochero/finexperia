@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FinExperia — Logo 02 "SIGNAL"
+  Concept: EKG flatline → dramatic spike → rising stock chart.
+  One unbroken path tells the entire brand story:
+  dormant theory → the FinExperia jolt → ascending career.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;800&amp;family=Inter:wght@600&display=swap');</style>
+    <linearGradient id="wg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6F61"/><stop offset="100%" stop-color="#FF9A85"/>
+    </linearGradient>
+    <linearGradient id="ibg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#231110"/><stop offset="100%" stop-color="#150907"/>
+    </linearGradient>
+    <linearGradient id="sg" x1="10" y1="0" x2="62" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#FF6F61" stop-opacity="0.22"/>
+      <stop offset="38%"  stop-color="#FF6F61" stop-opacity="0.65"/>
+      <stop offset="55%"  stop-color="#FF6F61"/>
+      <stop offset="100%" stop-color="#FF9A85"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="4" width="72" height="72" rx="18" fill="url(#ibg)"/>
+  <rect x="0" y="4" width="72" height="72" rx="18"
+        fill="none" stroke="rgba(255,111,97,0.16)" stroke-width="1"/>
+
+  <!-- THE SIGNAL: flat → EKG burst → rising chart (one continuous stroke) -->
+  <path d="M 10,47 L 24,47
+           L 27,43 L 30,50
+           L 34,10 L 37,62 L 41,37
+           L 43,47
+           C 52,44 58,33 62,19"
+        stroke="url(#sg)" stroke-width="2.5"
+        fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Glowing destination dot -->
+  <circle cx="62" cy="19" r="4"   fill="#FF9A85"/>
+  <circle cx="62" cy="19" r="8"   fill="none" stroke="#FF9A85" stroke-width="1.5" opacity="0.28"/>
+  <circle cx="62" cy="19" r="13"  fill="none" stroke="#FF9A85" stroke-width="1"   opacity="0.10"/>
+
+  <!-- Ghost baseline (the "before" state) -->
+  <line x1="10" y1="47" x2="62" y2="47"
+        stroke="rgba(255,111,97,0.07)" stroke-width="1"/>
+
+  <!-- Wordmark -->
+  <text y="47" font-family="'Sora','Helvetica Neue',Arial,sans-serif"
+        font-size="28" letter-spacing="-0.5">
+    <tspan x="88" font-weight="300" fill="#FFB4A2">Fin</tspan>
+    <tspan font-weight="800" fill="url(#wg)">Experia</tspan>
+  </text>
+  <text x="88" y="63" font-family="'Inter','Helvetica Neue',Arial,sans-serif"
+        font-size="9" font-weight="600" fill="#9E7060" letter-spacing="2.5">EXPERIENTIAL LEARNING · INDIA</text>
+</svg>

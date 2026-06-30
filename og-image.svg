@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- FinExperia social share card 1200×630. TODO: export to og-image.png for full FB/LinkedIn/X support. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&amp;display=swap');</style>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D4A53C"/><stop offset="100%" stop-color="#E6C275"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="78%" cy="22%" r="55%">
+      <stop offset="0%" stop-color="#D4A53C" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#D4A53C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#131210"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#g)"/>
+
+  <!-- Brand lockup top-left -->
+  <g transform="translate(72,66)">
+    <g transform="translate(0,-6) scale(0.46)">
+      <path d="M50 12 L86 84 L60 84 L50 60 Z" fill="#D4A53C"/>
+      <g stroke="#D4A53C" stroke-width="2.6" stroke-linecap="round" fill="none">
+        <line x1="50" y1="12" x2="14" y2="84"/><line x1="50" y1="19" x2="17.5" y2="84"/>
+        <line x1="50" y1="27" x2="21.5" y2="84"/><line x1="50" y1="35" x2="25.5" y2="84"/>
+        <line x1="50" y1="43" x2="29.5" y2="84"/><line x1="50" y1="51" x2="33.5" y2="84"/>
+        <line x1="50" y1="60" x2="38" y2="84"/>
+      </g>
+    </g>
+    <text x="62" y="34" font-family="'Sora',Arial,sans-serif" font-weight="800" font-size="30" letter-spacing="2" fill="#F7F4EC">FINEXPERIA<tspan font-size="13" dy="-14" fill="#D4A53C">™</tspan></text>
+  </g>
+
+  <!-- Headline -->
+  <text x="72" y="288" font-family="'Sora',Arial,sans-serif" font-weight="700" font-size="42" fill="#D8CDB8">Give your trainees</text>
+  <text x="68" y="398" font-family="'Sora',Arial,sans-serif" font-weight="800" font-size="138" letter-spacing="-4" fill="url(#g)">3 financial years</text>
+  <text x="72" y="466" font-family="'Sora',Arial,sans-serif" font-weight="800" font-size="46" fill="#F7F4EC">of real experience — in 200 hours.</text>
+
+  <!-- Footer strip -->
+  <text x="72" y="566" font-family="'Sora',Arial,sans-serif" font-weight="600" font-size="22" letter-spacing="3" fill="#9A8C72">FOR TRAINING INSTITUTES · INDIA'S FIRST</text>
+  <text x="1128" y="566" text-anchor="end" font-family="'Sora',Arial,sans-serif" font-weight="700" font-size="22" letter-spacing="3" fill="#D4A53C">PROVEN PATH TO GROWTH</text>
+</svg>
