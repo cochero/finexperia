@@ -1,0 +1,13 @@
+{
+  "name": "FinExperia — Experiential Finance Training for Institutes",
+  "short_name": "FinExperia",
+  "description": "Experiential virtual-office platform for finance & commerce institutes in Kerala and across India. Trainees gain 3 financial years of real experience in ~200 hours.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#131210",
+  "theme_color": "#D4A53C",
+  "icons": [
+    { "src": "finexperia-mark.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

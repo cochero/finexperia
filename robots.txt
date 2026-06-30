@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cochero.github.io/finexperia/sitemap.xml
