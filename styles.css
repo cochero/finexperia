@@ -645,3 +645,62 @@ section { padding: 100px 0; }
 .wa-btn { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem; background: #25D366; color: #0a3d20; font-family: "Sora",sans-serif; font-weight: 700; font-size: 0.9rem; padding: 0.7rem 1.2rem; border-radius: 999px; text-decoration: none; transition: transform 0.2s var(--ease), box-shadow 0.2s; }
 .wa-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 34px -12px rgba(37,211,102,0.6); }
 .wa-btn .ico { width: 20px; height: 20px; stroke: none; fill: #0a3d20; }
+
+/* ============================================================
+   REVIEW V2 — proof reorder, second counter, benefits restyle, impact graphic
+   ============================================================ */
+
+/* Second counter band — "Experience that makes students hireable" */
+.counter-section { background: var(--ink-soft); position: relative; overflow: hidden; }
+.counter-section::before { content: ""; position: absolute; top: -30%; left: -5%; right: -5%; height: 340px; background: radial-gradient(ellipse at 50% 0%, rgba(212,165,60,0.10), transparent 68%); pointer-events: none; }
+.counter-section .outcomes-h2 { margin-top: 0.6rem; }
+.tt-grid-4 { grid-template-columns: repeat(4,1fr); }
+@media (max-width: 900px) { .tt-grid-4 { grid-template-columns: repeat(2,1fr); } }
+
+/* Benefits grid — dark, icon-led cards, deliberately distinct from the white numbered steps grid (Review V2 #0) */
+.benefits-title { color: var(--text); text-align: center; }
+.benefits-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.benefit-card { display: flex; gap: 1rem; align-items: flex-start; background: rgba(255,255,255,0.03); border: 1px solid var(--line-soft); border-left: 3px solid rgba(212,165,60,0.5); border-radius: var(--r); padding: 1.5rem 1.4rem; transition: transform .25s var(--ease), border-color .25s, background .25s; }
+.benefit-card:hover { transform: translateY(-4px); background: rgba(212,165,60,0.06); border-left-color: var(--coral); }
+.benefit-ic { flex-shrink: 0; width: 2.7rem; height: 2.7rem; border-radius: 13px; display: grid; place-items: center; background: rgba(212,165,60,0.1); border: 1px solid var(--line-soft); }
+.benefit-ic .ico { width: 1.35rem; height: 1.35rem; color: var(--coral); }
+.benefit-cat { display: block; font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: var(--coral); }
+.benefit-card h4 { font-size: 1.02rem; color: var(--text); margin: 0.28rem 0 0.42rem; }
+.benefit-card p { font-size: 0.85rem; color: var(--muted); margin: 0; line-height: 1.55; }
+@media (max-width: 860px) { .benefits-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 560px) { .benefits-grid { grid-template-columns: 1fr; } }
+
+/* FinExperia Impact — premium on-brand journey graphic (Day 0 → Day 100) */
+.impact { margin-top: 4rem; padding: clamp(1.6rem,4vw,3rem); border: 1px solid var(--line); border-radius: var(--r-lg); background: linear-gradient(170deg, var(--surface-2), var(--surface)); position: relative; z-index: 1; box-shadow: var(--shadow); }
+.impact-head { text-align: center; margin-bottom: 2.8rem; }
+.impact-eyebrow { display: inline-block; font-family: "Sora",sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--coral); }
+.impact-title { font-size: clamp(1.5rem,3.4vw,2.3rem); margin: 0.6rem 0 0.5rem; }
+.impact-sub { color: var(--muted); font-size: 0.95rem; max-width: 44ch; margin: 0 auto; }
+
+.impact-track { display: grid; grid-template-columns: repeat(5,1fr); gap: 8px; position: relative; margin: 0; padding: 0; }
+.impact-track::before { content: ""; position: absolute; left: 10%; right: 10%; top: 3.3rem; height: 2px; background: linear-gradient(90deg, rgba(212,165,60,0.25), var(--coral)); z-index: 0; }
+.impact-step { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 0.45rem; text-align: center; }
+.impact-day { font-family: "Sora",sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.06em; color: var(--coral); height: 1.1rem; line-height: 1.1rem; }
+.impact-node { width: 3.6rem; height: 3.6rem; border-radius: 50%; display: grid; place-items: center; background: var(--ink); border: 2px solid var(--line); transition: transform .25s var(--ease), border-color .25s, background .25s; }
+.impact-node .ico { width: 1.5rem; height: 1.5rem; color: var(--coral); }
+.impact-step:hover .impact-node { transform: translateY(-5px); border-color: rgba(212,165,60,0.55); }
+.impact-step.is-peak .impact-node { background: var(--coral-grad); border-color: transparent; box-shadow: var(--coral-shadow); }
+.impact-step.is-peak .impact-node .ico { color: #131210; }
+.impact-role { font-family: "Sora",sans-serif; font-weight: 700; font-size: 0.92rem; color: var(--text); margin-top: 0.2rem; }
+.impact-desc { font-size: 0.76rem; color: var(--muted); line-height: 1.4; max-width: 17ch; }
+
+.impact-skills { margin-top: 3rem; padding-top: 1.9rem; border-top: 1px solid var(--line-soft); text-align: center; }
+.impact-skills-lbl { display: block; font-family: "Sora",sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+.impact-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; }
+.impact-chip { font-family: "Sora",sans-serif; font-size: 0.82rem; font-weight: 600; color: var(--text-soft); padding: 0.5rem 1rem; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.03); transition: border-color .25s, color .25s, background .25s; }
+.impact-chip:hover { border-color: rgba(212,165,60,0.5); color: var(--coral); background: rgba(212,165,60,0.08); }
+
+@media (max-width: 720px) {
+  .impact-track { grid-template-columns: 1fr; gap: 0; }
+  .impact-track::before { left: 1.8rem; right: auto; top: 1rem; bottom: 1rem; width: 2px; height: auto; }
+  .impact-step { display: grid; grid-template-columns: 3.6rem 1fr; grid-template-areas: "node day" "node role" "node desc"; column-gap: 1rem; row-gap: 0.12rem; text-align: left; padding: 0.95rem 0; align-items: center; }
+  .impact-node { grid-area: node; }
+  .impact-day { grid-area: day; align-self: end; height: auto; }
+  .impact-role { grid-area: role; margin-top: 0; }
+  .impact-desc { grid-area: desc; align-self: start; max-width: none; }
+}
