@@ -277,7 +277,7 @@ section { padding: 100px 0; }
 .stat-lbl { display: block; color: var(--muted); font-size: 0.88rem; margin-top: 0.6rem; position: relative; z-index: 1; }
 
 .testimonial { max-width: 800px; margin: 0 auto; text-align: center; padding: 3rem 2.5rem; background: rgba(255,255,255,0.025); border: 1px solid rgba(212,165,60,0.2); border-radius: var(--r-lg); position: relative; overflow: hidden; }
-.testimonial::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 110%, rgba(212,165,60,0.1), transparent 60%); }
+.testimonial::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 110%, rgba(212,165,60,0.1), transparent 60%); pointer-events: none; }
 .quote-glyph { font-family: "Sora", sans-serif; font-size: 7rem; line-height: 0.5; color: var(--coral); opacity: 0.22; margin-bottom: 1rem; }
 .testimonial blockquote { font-family: "Sora", sans-serif; font-size: clamp(1.1rem,2vw,1.35rem); font-weight: 500; line-height: 1.55; color: var(--text); margin: 0 0 1.8rem; position: relative; z-index: 1; }
 .testimonial figcaption { display: flex; align-items: center; justify-content: center; gap: 0.9rem; position: relative; z-index: 1; }
@@ -638,6 +638,8 @@ section { padding: 100px 0; }
 .video-hint { position: absolute; bottom: 14px; left: 0; right: 0; text-align: center; font-size: 0.8rem; color: var(--muted); z-index: 1; }
 .video-testimonial { max-width: 820px; margin-top: 3rem; }
 .video-testimonial .video-frame { margin-bottom: 1.6rem; }
+/* Keep the testimonial video above the decorative .testimonial::before overlay so its controls stay clickable */
+.video-testimonial .video-el { position: relative; z-index: 1; }
 /* Explainer clip is portrait (9:16) — present it as a centred phone-reel, not full width */
 .video-el { display: block; width: 100%; max-width: 340px; height: auto; margin: 0 auto; border-radius: var(--r-lg); border: 1px solid var(--line); background: #000; box-shadow: var(--shadow); }
 
