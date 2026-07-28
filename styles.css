@@ -643,6 +643,14 @@ section { padding: 100px 0; }
 /* Explainer clip is portrait (9:16) — present it as a centred phone-reel, not full width */
 .video-el { display: block; width: 100%; max-width: 340px; height: auto; margin: 0 auto; border-radius: var(--r-lg); border: 1px solid var(--line); background: #000; box-shadow: var(--shadow); }
 
+/* Provenance band — sources the proof stats to real live batches, so the numbers
+   read as measured outcomes rather than marketing claims. Links through to /about. */
+.provenance { max-width: 760px; margin: 2.6rem auto 0; padding: 1.15rem 1.6rem; background: rgba(212,165,60,0.05); border: 1px solid rgba(212,165,60,0.22); border-radius: var(--r); text-align: center; position: relative; z-index: 1; }
+.provenance p { color: var(--text-soft); font-size: 0.93rem; margin: 0; line-height: 1.65; }
+.provenance strong { color: var(--text); font-weight: 600; }
+.provenance a { display: inline-block; margin-top: 0.6rem; font-family: "Sora", sans-serif; font-weight: 600; font-size: 0.85rem; color: var(--coral); border-bottom: 1px solid rgba(212,165,60,0.35); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+.provenance a:hover { color: var(--coral-light); border-bottom-color: var(--coral-light); }
+
 /* WhatsApp CTA */
 .wa-btn { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem; background: #25D366; color: #0a3d20; font-family: "Sora",sans-serif; font-weight: 700; font-size: 0.9rem; padding: 0.7rem 1.2rem; border-radius: 999px; text-decoration: none; transition: transform 0.2s var(--ease), box-shadow 0.2s; }
 .wa-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 34px -12px rgba(37,211,102,0.6); }
