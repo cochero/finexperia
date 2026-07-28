@@ -75,6 +75,13 @@
 
   <style>
     /* ===== About-page-only additions (everything else reuses styles.css) ===== */
+
+    /* Dark section bands. NOTE: do not use .method-section here — that class is a
+       LIGHT (cream) section and would render this page's light-on-dark components
+       invisible. These keep the whole About page on the dark palette. */
+    .about-band { background: var(--ink-soft); }
+    .about-band-plain { background: var(--ink); }
+
     .about-hero { padding: 150px 0 70px; position: relative; overflow: hidden; }
     .about-hero::before { content: ""; position: absolute; top: -30%; left: 50%; transform: translateX(-50%); width: 900px; height: 520px; background: radial-gradient(ellipse at 50% 40%, rgba(212,165,60,0.13), transparent 68%); pointer-events: none; }
     .about-hero .container { position: relative; z-index: 1; }
@@ -94,7 +101,7 @@
     .origin-copy em.gold { font-style: normal; color: var(--coral); font-weight: 600; }
 
     .lineage { background: linear-gradient(175deg, var(--surface-2), var(--surface)); border: 1px solid var(--line); border-radius: var(--r); padding: 1.7rem 1.6rem; }
-    .lineage h3 { font-size: 1.02rem; margin-bottom: 0.3rem; }
+    .lineage h3 { font-size: 1.02rem; margin-bottom: 0.3rem; color: var(--text); }
     .lineage > p { font-size: 0.87rem; color: var(--muted); margin-bottom: 1.2rem; }
     .lin-row { display: flex; gap: 0.85rem; padding: 0.85rem 0; border-top: 1px solid var(--line-soft); }
     .lin-row:first-of-type { border-top: none; padding-top: 0; }
@@ -128,7 +135,7 @@
 
     /* Closing CTA */
     .about-cta { text-align: center; background: linear-gradient(175deg, var(--surface-2), var(--surface)); border: 1px solid var(--line); border-radius: var(--r-lg); padding: clamp(2.2rem, 5vw, 3.4rem); }
-    .about-cta h2 { font-size: clamp(1.5rem, 3.2vw, 2.2rem); margin-bottom: 0.8rem; }
+    .about-cta h2 { font-size: clamp(1.5rem, 3.2vw, 2.2rem); margin-bottom: 0.8rem; color: var(--text); }
     .about-cta p { color: var(--muted); max-width: 52ch; margin: 0 auto 1.8rem; }
   </style>
 </head>
@@ -191,7 +198,7 @@
     </section>
 
     <!-- ===== ORIGIN / CELSE LABS LINEAGE ===== -->
-    <section class="method-section" id="origin">
+    <section class="about-band" id="origin">
       <div class="container">
         <div class="sec-label">01</div>
         <div class="sec-head reveal">
@@ -362,7 +369,7 @@
     </section>
 
     <!-- ===== CTA ===== -->
-    <section class="method-section">
+    <section class="about-band-plain">
       <div class="container">
         <div class="about-cta reveal">
           <h2>Bring the method to your institute</h2>
