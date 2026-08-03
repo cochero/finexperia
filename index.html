@@ -670,13 +670,31 @@
           <h2>Bring FinExperia to your institute</h2>
           <p>Tell us about your institute and we'll set up a demo. Prefer the details first? Choose "Send me the brochure &amp; pricing" below and we'll email it across.</p>
 
-          <div class="contact-phone-block">
+          <!--
+            Region-based contact. Defaults to "Other" (see design doc §7.3), then
+            script.js may auto-detect the visitor's state and switch. The picker is
+            always visible so a visitor can correct a wrong guess (design doc §4.2).
+            Numbers live in ONE place: the REGION_CONTACTS block at the top of script.js.
+          -->
+          <div class="contact-phone-block" id="regionContact">
             <span class="ph-label">Talk to us directly</span>
-            <a href="tel:+918075313751" class="ph-num">+91 80753 13751</a>
+            <a href="tel:+919516811111" class="ph-num" id="regionPhone">+91 95168 11111</a>
             <span class="ph-hours">Mon – Sat &nbsp;·&nbsp; 9 AM – 7 PM IST</span>
-            <a href="https://wa.me/918075313751?text=Finxeperia%20Demo" class="wa-btn" target="_blank" rel="noopener">
+            <a href="https://wa.me/919516811111?text=Finxeperia%20Demo" class="wa-btn" id="regionWhatsapp" target="_blank" rel="noopener">
               <svg class="ico"><use href="#i-whatsapp"/></svg> Finxeperia Demo on WhatsApp
             </a>
+
+            <div class="region-picker">
+              <label class="region-picker-label" for="regionSelect">Showing contact for</label>
+              <select id="regionSelect" class="region-select" aria-describedby="regionHint">
+                <option value="kerala">Kerala</option>
+                <option value="tamil_nadu">Tamil Nadu</option>
+                <option value="karnataka">Karnataka</option>
+                <option value="andhra_pradesh">Andhra Pradesh</option>
+                <option value="other" selected>Other / outside these states</option>
+              </select>
+              <span class="region-hint" id="regionHint" role="status" aria-live="polite">Not your region? Choose it above.</span>
+            </div>
           </div>
 
           <div class="contact-details">

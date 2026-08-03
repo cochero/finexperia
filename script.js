@@ -4,6 +4,30 @@
 (function () {
   "use strict";
 
+  /* ============================================================
+     REGION CONTACT NUMBERS — EDIT HERE
+     ------------------------------------------------------------
+     To change a number, edit the entry below. Nothing else needs
+     to change: the picker, detection and links all read from here.
+
+       phone     what the visitor sees, and what tel: dials
+       whatsapp  digits only, country code first, no + or spaces
+       label     shown in the region picker
+
+     All five regions are kept separate on purpose (design doc §5),
+     so any one of them can be given its own number later.
+     ============================================================ */
+  var REGION_CONTACTS = {
+    kerala:         { phone: "+91 80753 13751", whatsapp: "918075313751", label: "Kerala" },
+    tamil_nadu:     { phone: "+91 95168 11111", whatsapp: "919516811111", label: "Tamil Nadu" },
+    karnataka:      { phone: "+91 95168 11111", whatsapp: "919516811111", label: "Karnataka" },
+    andhra_pradesh: { phone: "+91 95168 11111", whatsapp: "919516811111", label: "Andhra Pradesh" },
+    other:          { phone: "+91 95168 11111", whatsapp: "919516811111", label: "Other" }
+  };
+  var REGION_DEFAULT = "other";      // shown before/if detection fails (design doc §7.3)
+  var REGION_STORAGE_KEY = "fx-region";
+  var REGION_WA_TEXT = "Finxeperia%20Demo";
+
   // Footer year
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -205,6 +229,92 @@
       n.addEventListener("click", function () {
         showModule(Number(n.getAttribute("data-mod")));
       });
+    });
+  }
+
+  // ===== Region-based contact number =====
+  // Design doc: finexperia-region-contact-feature.md
+  // Order of precedence: saved manual choice > IP detection > REGION_DEFAULT.
+  // A saved choice skips the lookup entirely — it respects the visitor and
+  // spends fewer of the free daily lookups.
+  var regionSelect = document.getElementById("regionSelect");
+  var regionPhone = document.getElementById("regionPhone");
+  var regionWhatsapp = document.getElementById("regionWhatsapp");
+  var regionHint = document.getElementById("regionHint");
+
+  // Guard: script.js also loads on about.html, which has no contact block.
+  if (regionSelect && regionPhone && regionWhatsapp) {
+
+    // localStorage throws in some private-browsing modes — never let that break the page.
+    var regionStore = {
+      get: function () {
+        try { return window.localStorage.getItem(REGION_STORAGE_KEY); } catch (e) { return null; }
+      },
+      set: function (v) {
+        try { window.localStorage.setItem(REGION_STORAGE_KEY, v); } catch (e) { /* ignore */ }
+      }
+    };
+
+    var setHint = function (msg) {
+      if (regionHint) regionHint.textContent = msg;
+    };
+
+    var applyRegion = function (key) {
+      var c = REGION_CONTACTS[key] || REGION_CONTACTS[REGION_DEFAULT];
+      regionPhone.textContent = c.phone;
+      regionPhone.setAttribute("href", "tel:" + c.phone.replace(/[^\d+]/g, ""));
+      regionWhatsapp.setAttribute("href", "https://wa.me/" + c.whatsapp + "?text=" + REGION_WA_TEXT);
+      if (regionSelect.value !== key) regionSelect.value = key;
+    };
+
+    // Map whatever the lookup service calls the region onto our keys.
+    var matchRegion = function (data) {
+      if (!data || data.success === false) return null;
+      if (data.country_code && data.country_code !== "IN") return "other";
+      var r = String(data.region || "").toLowerCase();
+      if (r.indexOf("kerala") > -1) return "kerala";
+      if (r.indexOf("tamil") > -1) return "tamil_nadu";
+      if (r.indexOf("karnataka") > -1) return "karnataka";
+      if (r.indexOf("andhra") > -1) return "andhra_pradesh";
+      return "other";
+    };
+
+    // Visitor already told us who they are — use it, don't second-guess them.
+    var saved = regionStore.get();
+    if (saved && REGION_CONTACTS[saved]) {
+      applyRegion(saved);
+      setHint("Showing your saved region. Change it any time.");
+    } else {
+      applyRegion(REGION_DEFAULT);
+      setHint("Detecting your region…");
+
+      // Abort a slow lookup rather than leave the hint hanging.
+      var ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+      var timer = window.setTimeout(function () { if (ctrl) ctrl.abort(); }, 4000);
+
+      fetch("https://ipwho.is/?fields=success,country_code,region", ctrl ? { signal: ctrl.signal } : undefined)
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) {
+          window.clearTimeout(timer);
+          var key = matchRegion(data);
+          if (key) {
+            applyRegion(key);
+            setHint("Detected " + REGION_CONTACTS[key].label + " — not right? Change it above.");
+          } else {
+            setHint("Not your region? Choose it above.");
+          }
+        })
+        .catch(function () {
+          // Offline, blocked, rate-limited or timed out — the default stands.
+          window.clearTimeout(timer);
+          setHint("Not your region? Choose it above.");
+        });
+    }
+
+    regionSelect.addEventListener("change", function () {
+      applyRegion(regionSelect.value);
+      regionStore.set(regionSelect.value);
+      setHint("Saved — we'll show " + (REGION_CONTACTS[regionSelect.value] || {}).label + " next time.");
     });
   }
 

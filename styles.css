@@ -643,6 +643,16 @@ section { padding: 100px 0; }
 /* Explainer clip is portrait (9:16) — present it as a centred phone-reel, not full width */
 .video-el { display: block; width: 100%; max-width: 340px; height: auto; margin: 0 auto; border-radius: var(--r-lg); border: 1px solid var(--line); background: #000; box-shadow: var(--shadow); }
 
+/* Region contact picker — always visible so a visitor can correct a wrong
+   IP guess (design doc §4.2). Sits inside .contact-phone-block. */
+.region-picker { display: grid; gap: 0.4rem; margin-top: 1.25rem; padding-top: 1.1rem; border-top: 1px solid rgba(212,165,60,0.22); }
+.region-picker-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.09em; color: var(--muted); font-weight: 600; }
+.region-select { width: 100%; max-width: 320px; padding: 0.82rem 2.2rem 0.82rem 0.9rem; background-color: rgba(19,18,16,0.5); border: 1px solid var(--line-soft); border-radius: var(--r-sm); color: var(--text); font-family: inherit; font-size: 0.92rem; cursor: pointer; appearance: none; -webkit-appearance: none; transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239A8C72' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 15px; }
+.region-select:hover { border-color: rgba(212,165,60,0.4); }
+.region-select:focus-visible { outline: none; border-color: var(--coral); box-shadow: 0 0 0 3px rgba(212,165,60,0.18); background-color: rgba(19,18,16,0.65); }
+.region-select option { background: var(--surface-2); color: var(--text); }
+.region-hint { font-size: 0.76rem; color: var(--muted); line-height: 1.45; }
+
 /* Provenance band — sources the proof stats to real live batches, so the numbers
    read as measured outcomes rather than marketing claims. Links through to /about. */
 .provenance { max-width: 760px; margin: 2.6rem auto 0; padding: 1.15rem 1.6rem; background: rgba(212,165,60,0.05); border: 1px solid rgba(212,165,60,0.22); border-radius: var(--r); text-align: center; position: relative; z-index: 1; }
