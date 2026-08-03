@@ -26,7 +26,7 @@
   };
   var REGION_DEFAULT = "other";      // shown before/if detection fails (design doc §7.3)
   var REGION_STORAGE_KEY = "fx-region";
-  var REGION_WA_TEXT = "Finxeperia%20Demo";
+  var REGION_WA_TEXT = "FinExperia%20Demo";
 
   // Footer year
   var yearEl = document.getElementById("year");
